@@ -20,17 +20,23 @@ export function MetadataTemplate({
   ogImage = "/logos/logo-1.svg",
   noIndex = false,
 }: MetaDataTemplateProps): Metadata {
-  const url = `${APP_URL}${slug ? `/${slug}` : ""}`;
+  console.log("in coming url : ", slug);
+
+  // Decode percent-encoded characters (like Arabic) to raw UTF-8 characters
+  const decodedSlug = decodeURIComponent(slug);
+  const url = `${APP_URL}${decodedSlug ? `/${decodedSlug}` : ""}`;
 
   return {
     title,
     description,
     alternates: { canonical: url },
-    robots: noIndex ? { index: false, follow: false } : { index: true, follow: true },
+    robots: noIndex
+      ? { index: false, follow: false }
+      : { index: true, follow: true },
     openGraph: {
       title: ogTitle ?? title,
       description: ogDescription ?? description,
-      url,
+      url: url,
       siteName: APP_NAME,
       locale: "ar_AE",
       type: "website",

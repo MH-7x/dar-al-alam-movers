@@ -15,7 +15,7 @@ export function CTASection({
   eyebrow,
   title,
   description,
-  primaryCta = { label: "اطلب عرض السعر", href: "/contact" },
+  primaryCta = { label: "اطلب عرض السعر", href: "/اتصل-بنا" },
   secondaryCta = { label: siteConfig.phoneDisplay, href: `tel:${siteConfig.phone}` },
   variant = "solid",
 }: CTASectionProps) {

@@ -39,14 +39,14 @@ export function WhyUsSection() {
           <div className="relative">
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
               <Image
-                src="/placeholders/moving-team.svg"
-                alt="فريق دار العلم لنقل الأثاث"
+                src="/لماذا-تختار-شركة-دار-العلم-لنقل-الاثاث-في-دبي.jpg"
+                alt="لماذا تختار شركة دار العلم نقل اثاث في دبي - فريق محترف ومدرب وأسعار شفافة"
                 fill
                 className="object-cover"
               />
             </div>
             {/* Floating badge */}
-            <div className="absolute -bottom-5 -end-5 bg-[var(--primary)] text-white rounded-2xl p-5 shadow-xl">
+            <div className="absolute -bottom-5 md:-end-5 bg-[var(--primary)] text-white rounded-2xl p-5 shadow-xl">
               <div
                 className="text-3xl font-bold"
                 style={{ fontFamily: "var(--font-ts-tarek), sans-serif" }}
@@ -56,7 +56,9 @@ export function WhyUsSection() {
               <div className="text-xs text-white/80 mt-1">تقييم العملاء</div>
               <div className="flex gap-0.5 mt-1">
                 {[...Array(5)].map((_, i) => (
-                  <span key={i} className="text-yellow-400 text-xs">★</span>
+                  <span key={i} className="text-yellow-400 text-xs">
+                    ★
+                  </span>
                 ))}
               </div>
             </div>
@@ -69,7 +71,8 @@ export function WhyUsSection() {
               لماذا تختار دار العلم لنقل اثاث دبي؟
             </h2>
             <p className="text-[var(--muted-foreground)] mb-8 leading-relaxed">
-              نعرف أن يوم النقل من أصعب الأيام على أي عائلة أو شركة. لذلك صممنا خدماتنا لتزيل عنك القلق من أول مكالمة.
+              نعرف أن يوم النقل من أصعب الأيام على أي عائلة أو شركة. لذلك صممنا
+              خدماتنا لتزيل عنك القلق من أول مكالمة.
             </p>
             <div className="flex flex-col gap-5">
               {reasons.map(({ icon: Icon, title, desc }) => (
@@ -78,8 +81,12 @@ export function WhyUsSection() {
                     <Icon size={18} className="text-[var(--primary)]" />
                   </div>
                   <div>
-                    <h3 className="text-sm font-medium text-[var(--secondary)] mb-1">{title}</h3>
-                    <p className="text-sm text-[var(--muted-foreground)] leading-relaxed">{desc}</p>
+                    <h3 className="text-sm font-medium text-[var(--secondary)] mb-1">
+                      {title}
+                    </h3>
+                    <p className="text-sm text-[var(--muted-foreground)] leading-relaxed">
+                      {desc}
+                    </p>
                   </div>
                 </div>
               ))}

@@ -48,7 +48,7 @@ export function Footer() {
               {services.map((s) => (
                 <li key={s.id}>
                   <Link
-                    href={`/services/${s.slug}`}
+                    href={`/خدماتنا/${s.slug}`}
                     className="text-sm text-white/70 hover:text-white transition-colors"
                   >
                     {s.titleAr}
@@ -67,7 +67,7 @@ export function Footer() {
               {locations.map((l) => (
                 <li key={l.id}>
                   <Link
-                    href={`/locations/${l.slug}`}
+                    href={`/المواقع/${l.slug}`}
                     className="text-sm text-white/70 hover:text-white transition-colors"
                   >
                     نقل اثاث {l.nameAr}
@@ -83,7 +83,7 @@ export function Footer() {
             <ul className="flex flex-col gap-2">
               <li>
                 <Link
-                  href="/about"
+                  href="/من-نحن"
                   className="text-sm text-white/70 hover:text-white transition-colors"
                 >
                   من نحن
@@ -91,7 +91,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/contact"
+                  href="/اتصل-بنا"
                   className="text-sm text-white/70 hover:text-white transition-colors"
                 >
                   اتصل بنا
@@ -99,7 +99,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/privacy"
+                  href="/سياسة-الخصوصية"
                   className="text-sm text-white/70 hover:text-white transition-colors"
                 >
                   سياسة الخصوصية
@@ -107,7 +107,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/terms"
+                  href="/شروط-الخدمة"
                   className="text-sm text-white/70 hover:text-white transition-colors"
                 >
                   الشروط والأحكام

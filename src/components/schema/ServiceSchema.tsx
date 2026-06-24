@@ -12,7 +12,7 @@ export function ServiceSchema({ name, description, url }: ServiceSchemaProps) {
     "@type": "Service",
     name,
     description,
-    url: `${siteConfig.url}${url}`,
+    url: encodeURI(`${siteConfig.url}${url}`),
     provider: {
       "@type": "MovingCompany",
       name: siteConfig.name,

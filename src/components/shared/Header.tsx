@@ -37,7 +37,7 @@ export function Header() {
                 {services.map((s) => (
                   <Link
                     key={s.id}
-                    href={`/services/${s.slug}`}
+                    href={`/خدماتنا/${s.slug}`}
                     className="block px-4 py-2.5 text-sm text-[var(--secondary)] hover:bg-[var(--accent)] hover:text-[var(--primary)] transition-colors first:rounded-t-xl last:rounded-b-xl"
                   >
                     {s.titleAr}
@@ -53,7 +53,7 @@ export function Header() {
                 {locations.map((l) => (
                   <Link
                     key={l.id}
-                    href={`/locations/${l.slug}`}
+                    href={`/المواقع/${l.slug}`}
                     className="block px-4 py-2.5 text-sm text-[var(--secondary)] hover:bg-[var(--accent)] hover:text-[var(--primary)] transition-colors first:rounded-t-xl last:rounded-b-xl"
                   >
                     {l.nameAr}
@@ -61,10 +61,10 @@ export function Header() {
                 ))}
               </div>
             </div>
-            <Link href="/about" className="text-sm font-medium text-[var(--secondary)] hover:text-[var(--primary)] transition-colors">
+            <Link href="/من-نحن" className="text-sm font-medium text-[var(--secondary)] hover:text-[var(--primary)] transition-colors">
               من نحن
             </Link>
-            <Link href="/contact" className="text-sm font-medium text-[var(--secondary)] hover:text-[var(--primary)] transition-colors">
+            <Link href="/اتصل-بنا" className="text-sm font-medium text-[var(--secondary)] hover:text-[var(--primary)] transition-colors">
               اتصل بنا
             </Link>
           </nav>
@@ -97,7 +97,7 @@ export function Header() {
             <div className="py-1">
               <p className="text-xs text-[var(--muted-foreground)] py-1 font-medium">خدماتنا</p>
               {services.map((s) => (
-                <Link key={s.id} href={`/services/${s.slug}`} onClick={() => setOpen(false)} className="block py-2 ps-3 text-sm text-[var(--secondary)]">
+                <Link key={s.id} href={`/خدماتنا/${s.slug}`} onClick={() => setOpen(false)} className="block py-2 ps-3 text-sm text-[var(--secondary)]">
                   {s.titleAr}
                 </Link>
               ))}
@@ -105,13 +105,13 @@ export function Header() {
             <div className="py-1">
               <p className="text-xs text-[var(--muted-foreground)] py-1 font-medium">مناطق الخدمة</p>
               {locations.map((l) => (
-                <Link key={l.id} href={`/locations/${l.slug}`} onClick={() => setOpen(false)} className="block py-2 ps-3 text-sm text-[var(--secondary)]">
+                <Link key={l.id} href={`/المواقع/${l.slug}`} onClick={() => setOpen(false)} className="block py-2 ps-3 text-sm text-[var(--secondary)]">
                   {l.nameAr}
                 </Link>
               ))}
             </div>
-            <Link href="/about" onClick={() => setOpen(false)} className="py-2.5 text-sm font-medium text-[var(--secondary)]">من نحن</Link>
-            <Link href="/contact" onClick={() => setOpen(false)} className="py-2.5 text-sm font-medium text-[var(--secondary)]">اتصل بنا</Link>
+            <Link href="/من-نحن" onClick={() => setOpen(false)} className="py-2.5 text-sm font-medium text-[var(--secondary)]">من نحن</Link>
+            <Link href="/اتصل-بنا" onClick={() => setOpen(false)} className="py-2.5 text-sm font-medium text-[var(--secondary)]">اتصل بنا</Link>
             <a
               href={`tel:${siteConfig.phone}`}
               className="mt-2 flex items-center justify-center gap-2 bg-[var(--primary)] text-white text-sm font-medium px-4 py-3 rounded-lg"

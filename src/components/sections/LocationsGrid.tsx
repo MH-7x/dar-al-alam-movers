@@ -26,7 +26,7 @@ export function LocationsGrid({
           {locations.map((loc) => (
             <Link
               key={loc.id}
-              href={`/locations/${loc.slug}`}
+              href={`/المواقع/${loc.slug}`}
               className="group flex items-start gap-3 p-5 rounded-xl border border-[var(--border)] bg-white hover:shadow-md transition-shadow"
             >
               <MapPin size={18} className="text-[var(--primary)] mt-0.5 flex-shrink-0" />

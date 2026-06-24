@@ -106,10 +106,12 @@ export default function HomePage() {
         showForm
       />
       <TrustStats />
-      <MovingGallery />
+
       <ServicesGrid />
       <WhyUsSection />
       <PricingTable />
+      <MovingGallery />
+      <div className="-mt-10" />
       <ProcessSteps />
       <GuaranteesSection />
       <LocationsGrid />

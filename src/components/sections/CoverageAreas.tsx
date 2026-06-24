@@ -1,5 +1,6 @@
 import { MapPin } from "lucide-react";
 import { SectionEyebrow } from "@/components/shared/SectionEyebrow";
+import Image from "next/image";
 
 const dubaiAreas = [
   "دبي مارينا",
@@ -96,7 +97,14 @@ export function CoverageAreas() {
               </div>
             </div>
           </div>
-          <div className="aspect-4/3 bg-muted rounded-2xl"></div>
+          <div className="aspect-4/3 bg-muted rounded-2xl relative overflow-hidden">
+            <Image
+              src={"/مناطق-تغطية-نقل-الاثاث-في-دبي-والامارات-دار-العلم.jpg"}
+              alt="مناطق تغطية شركة دار العلم لنقل الأثاث في دبي وجميع إمارات الدولة السبع"
+              fill
+              className="object-cover"
+            />
+          </div>
           {/* Other emirates */}
         </div>
       </div>

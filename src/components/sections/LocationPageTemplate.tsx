@@ -63,8 +63,8 @@ export function LocationPageTemplate({
 }: LocationPageTemplateProps) {
   const breadcrumbs = [
     { name: "الرئيسية", href: "/" },
-    { name: "مناطق الخدمة", href: "/locations" },
-    { name: `نقل اثاث ${nameAr}`, href: `/locations/${slug}` },
+    { name: "المواقع", href: "/المواقع" },
+    { name: `نقل اثاث ${nameAr}`, href: `/المواقع/${slug}` },
   ];
 
   return (
@@ -93,7 +93,9 @@ export function LocationPageTemplate({
                   اتصل الآن
                 </a>
                 <a
-                  href={`https://wa.me/${siteConfig.phone}`}
+                  href={siteConfig.whatsapp}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-white/15 border border-white/30 text-white px-5 py-2.5 rounded-xl text-sm font-medium hover:bg-white/20 transition-colors"
                 >
                   <MessageCircle size={15} />
@@ -327,7 +329,7 @@ export function LocationPageTemplate({
               {siblings.map((loc) => (
                 <Link
                   key={loc.slug}
-                  href={`/locations/${loc.slug}`}
+                  href={`/المواقع/${loc.slug}`}
                   className="px-4 py-2 rounded-xl border border-[var(--border)] bg-white text-sm text-[var(--secondary)] hover:border-[var(--primary)] hover:text-[var(--primary)] transition-colors"
                 >
                   نقل اثاث {loc.nameAr}

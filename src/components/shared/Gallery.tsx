@@ -12,39 +12,44 @@ import Image from "next/image";
 
 const images = [
   {
-    fileName: "/gallery/hamad-movers-home-villa-moving-dubai.jpg",
-    altText: "فريق دار العالم لنقل الأثاث يحمل أثاثاً خارج فيلا فاخرة في دبي",
-  },
-  {
-    fileName: "/gallery/hamad-movers-packing-wrapping-service-dubai-villa.jpg",
+    fileName: "/gallery/شركة-نقل-اثاث-دبي.jpg",
     altText:
-      "فريق تغليف دار العالم يلف الأثاث بالفقاعات البلاستيكية داخل فيلا في دبي",
+      "شركة دار العلم نقل اثاث - نقل اثاث في دبي بدقة عالية وبدون توقف لعملك",
   },
   {
-    fileName:
-      "/gallery/hamad-movers-professional-packing-highrise-apartment-dubai.jpg",
-    altText: "فريق دار العالم يقوم بتعبئة وتغليف محتويات شقة في برج سكني بدبي",
-  },
-  {
-    fileName: "/gallery/hamad-movers-furniture-assembly-service-dubai.jpg",
-    altText: "فني دار العالم يقوم بتركيب خزانة ملابس في غرفة نوم فيلا بدبي",
-  },
-  {
-    fileName: "/gallery/hamad-movers-furniture-assembly-apartment-dubai.jpg",
-    altText: "موظف دار العالم يركب طقم أريكة في شقة جديدة بدبي",
-  },
-  {
-    fileName: "/gallery/hamad-movers-residential-moving-highrise-dubai.jpg",
-    altText: "فريق دار العالم يحمل الأثاث إلى شاحنة النقل أمام برج سكني في دبي",
-  },
-  {
-    fileName: "/gallery/hamad-movers-long-distance-moving-uae-highway.jpg",
-    altText: "شاحنة دار العالم لنقل الأثاث تسير على طريق سريع في الإمارات",
-  },
-  {
-    fileName: "/gallery/hamad-movers-team-moving-truck-burj-khalifa-dubai.jpg",
+    fileName: "/gallery/نقل-اثاث-ابوظبي-شركة-دار-العلم.jpg",
     altText:
-      "فريق دار العالم لنقل الأثاث أمام شاحنة النقل مع برج خليفة في الخلفية",
+      "نقل اثاث ابوظبي مع شركة دار العلم نقل اثاث - فريق محترف ينقل أثاث فيلا في أبوظبي",
+  },
+  {
+    fileName: "/gallery/نقل-اثاث-العين-شركة-دار-العلم.jpg",
+    altText:
+      "نقل اثاث العين مع شركة دار العلم نقل اثاث - شاحنة مغلقة في طريق العين السكني",
+  },
+  {
+    fileName: "/gallery/نقل-اثاث-الشارقة-شركة-دار-العلم.jpg",
+    altText:
+      "نقل أثاث الشارقة مع شركة دار العلم نقل اثاث - تحميل أثاث الشقق في الشارقة باحترافية",
+  },
+  {
+    fileName: "/gallery/نقل-اثاث-عجمان-شركة-دار-العلم.jpg",
+    altText:
+      "نقل اثاث عجمان مع شركة دار العلم نقل اثاث - شاحنة مجهزة وفريق متخصص في عجمان",
+  },
+  {
+    fileName: "/gallery/نقل-اثاث-راس-الخيمة-شركة-دار-العلم.jpg",
+    altText:
+      "نقل اثاث راس الخيمة مع شركة دار العلم نقل اثاث - تفريغ الأثاث في فيلا برأس الخيمة",
+  },
+  {
+    fileName: "/gallery/نقل-الاثاث-ام-القيوين-شركة-دار-العلم.jpg",
+    altText:
+      "نقل الاثاث ام القيوين مع شركة دار العلم نقل اثاث - شاحنة وفريق محترف في أم القيوين",
+  },
+  {
+    fileName: "/gallery/نقل-اثاث-الفجيرة-شركة-دار-العلم.jpg",
+    altText:
+      "نقل اثاث الفجيرة مع شركة دار العلم نقل اثاث - تحميل أثاث في فيلا بالفجيرة بخلفية جبال الحجر",
   },
 ];
 

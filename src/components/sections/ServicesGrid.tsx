@@ -40,17 +40,14 @@ export function ServicesGrid({
           {list.map((service) => (
             <Link
               key={service.id}
-              href={`/services/${service.slug}`}
+              href={`/خدماتنا/${service.slug}`}
               className="group bg-white rounded-2xl overflow-hidden border border-border hover:shadow-lg hover:border-(--primary)/30 transition-all duration-200"
             >
               {/* Image */}
               <div className="relative aspect-video overflow-hidden bg-accent">
                 <Image
-                  src={
-                    serviceImages[service.id] ??
-                    "/placeholders/service-home.svg"
-                  }
-                  alt={service.titleAr}
+                  src={service.image ?? "/placeholders/service-home.svg"}
+                  alt={service.imageAlt}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />

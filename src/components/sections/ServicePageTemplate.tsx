@@ -12,6 +12,7 @@ import { QuoteForm } from "@/components/sections/QuoteForm";
 import { SectionEyebrow } from "@/components/shared/SectionEyebrow";
 import Link from "next/link";
 import type { FAQItem } from "@/lib/types";
+import { services } from "@/lib/siteConfig";
 
 interface PricingRow {
   type: string;
@@ -51,17 +52,19 @@ export function ServicePageTemplate({
 }: ServicePageTemplateProps) {
   const breadcrumbs = [
     { name: "الرئيسية", href: "/" },
-    { name: "خدماتنا", href: "/services" },
-    { name: nameAr, href: `/services/${slug}` },
+    { name: "خدماتنا", href: "/خدماتنا" },
+    { name: nameAr, href: `/خدماتنا/${slug}` },
   ];
 
+  const imageSrc = services.find((s) => s.slug === slug)?.image;
+  const alt = services.find((s) => s.slug === slug)?.imageAlt;
   return (
     <>
       <BreadcrumbSchema items={breadcrumbs} />
       <ServiceSchema
         name={nameAr}
         description={subtitle}
-        url={`/services/${slug}`}
+        url={`/خدماتنا/${slug}`}
       />
 
       {/* Hero section */}
@@ -94,7 +97,14 @@ export function ServicePageTemplate({
             </div>
             {/* Image */}
             <div className="relative aspect-video rounded-t-2xl overflow-hidden">
-              <Image src={image} alt={nameAr} fill className="object-cover" />
+              <Image
+                src={imageSrc ?? image}
+                alt={alt ?? nameAr}
+                fill
+                loading="eager"
+                priority
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
@@ -203,7 +213,7 @@ export function ServicePageTemplate({
               {relatedServices.map((s) => (
                 <Link
                   key={s.slug}
-                  href={`/services/${s.slug}`}
+                  href={`/خدماتنا/${s.slug}`}
                   className="p-5 rounded-xl border border-[var(--border)] bg-white hover:shadow-md hover:border-[var(--primary)]/30 transition-all"
                 >
                   <h3 className="text-base font-medium text-[var(--secondary)] mb-1">
