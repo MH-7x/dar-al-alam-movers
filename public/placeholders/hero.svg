@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" fill="#D1E5FF"/>
+  <rect x="60" y="280" width="680" height="160" rx="8" fill="#004AAD" opacity="0.15"/>
+  <!-- Truck body -->
+  <rect x="420" y="220" width="260" height="140" rx="6" fill="#004AAD" opacity="0.8"/>
+  <rect x="320" y="250" width="110" height="110" rx="4" fill="#004AAD"/>
+  <circle cx="370" cy="390" r="28" fill="#333"/>
+  <circle cx="370" cy="390" r="14" fill="#fff"/>
+  <circle cx="630" cy="390" r="28" fill="#333"/>
+  <circle cx="630" cy="390" r="14" fill="#fff"/>
+  <rect x="320" y="250" width="110" height="60" rx="4" fill="#6bb3ff" opacity="0.5"/>
+  <!-- Boxes -->
+  <rect x="120" y="240" width="80" height="70" rx="4" fill="#004AAD" opacity="0.6"/>
+  <rect x="210" y="260" width="60" height="50" rx="4" fill="#004AAD" opacity="0.4"/>
+  <rect x="140" y="175" width="55" height="65" rx="4" fill="#004AAD" opacity="0.5"/>
+  <line x1="120" y1="275" x2="200" y2="275" stroke="white" stroke-width="2" opacity="0.6"/>
+  <line x1="155" y1="240" x2="155" y2="310" stroke="white" stroke-width="2" opacity="0.6"/>
+</svg>

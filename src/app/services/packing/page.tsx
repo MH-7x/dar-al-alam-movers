@@ -1,0 +1,61 @@
+import type { Metadata } from "next";
+import { MetadataTemplate } from "@/lib/MetaDataTemplate";
+import { ServicePageTemplate } from "@/components/sections/ServicePageTemplate";
+import type { FAQItem } from "@/lib/types";
+
+export const metadata: Metadata = MetadataTemplate({
+  title: "تغليف الأثاث في دبي | مواد عالية الجودة وحماية تامة",
+  description: "خدمة تغليف احترافية في دبي — ورق فقاعي، بلاستيك مطاطي، كراتين مقواة، حماية زوايا. اتصل 0551557018.",
+  slug: "services/packing",
+});
+
+const faqs: FAQItem[] = [
+  {
+    question: "ما مواد التغليف التي تستخدمونها؟",
+    answer: <p>نستخدم ورقًا فقاعيًا، بلاستيكًا مطاطيًا، كراتين مقواة، أغلفة بلاستيكية للمراتب، وصناديق خشبية للزجاجيات والمرايا.</p>,
+  },
+  {
+    question: "هل خدمة التغليف متاحة بدون نقل؟",
+    answer: <p>نعم، يمكننا تقديم خدمة التغليف فقط إذا كنت تحتاج مساعدة في التغليف دون نقل.</p>,
+  },
+];
+
+export default function PackingPage() {
+  return (
+    <ServicePageTemplate
+      title="تغليف الأثاث في دبي — حماية تامة لكل قطعة"
+      subtitle="تغليف احترافي بمواد عالية الجودة لحماية كل قطعة أثاث أثناء النقل."
+      slug="packing"
+      nameAr="التغليف الاحترافي"
+      image="/placeholders/service-packing.svg"
+      pricingRows={[
+        { type: "تغليف جزئي (قطع زجاجية وثمينة)", price: "200 – 500" },
+        { type: "تغليف كامل لشقة", price: "400 – 900" },
+        { type: "تغليف كامل لفيلا", price: "700 – 1,500" },
+      ]}
+      intro={
+        <p>
+          <strong>تغليف الأثاث في دبي</strong> هو الخطوة الأهم لضمان وصول قطعك سليمة. شركة دار العلم
+          تستخدم أفضل مواد التغليف — ورق فقاعي، بلاستيك مطاطي، كراتين مقواة، وحماية الزوايا — لكل
+          قطعة أثاث بدون استثناء.
+        </p>
+      }
+      features={[
+        "ورق فقاعي للقطع الهشة",
+        "بلاستيك مطاطي لحماية الأثاث",
+        "كراتين مقواة للصناديق",
+        "أكياس بلاستيكية خاصة للمراتب",
+        "صناديق خشبية للمرايا والزجاجيات",
+        "حماية الزوايا والأسطح",
+        "تعليم الصناديق بمحتوياتها",
+        "تغليف متاح بدون نقل",
+      ]}
+      relatedServices={[
+        { slug: "home-furniture", titleAr: "نقل أثاث المنزل", descAr: "نقل كامل مع تغليف شامل" },
+        { slug: "assembly", titleAr: "الفك والتركيب", descAr: "فك وتركيب الأثاث" },
+        { slug: "storage", titleAr: "التخزين الآمن", descAr: "تخزين بعد التغليف" },
+      ]}
+      faqs={faqs}
+    />
+  );
+}

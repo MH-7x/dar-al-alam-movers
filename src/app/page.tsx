@@ -1,65 +1,127 @@
-import Image from "next/image";
+import type { Metadata } from "next";
+import { Hero } from "@/components/sections/Hero";
+import { TrustStats } from "@/components/sections/TrustStats";
+import { ServicesGrid } from "@/components/sections/ServicesGrid";
+import { WhyUsSection } from "@/components/sections/WhyUsSection";
+import { PricingTable } from "@/components/sections/PricingTable";
+import { ProcessSteps } from "@/components/sections/ProcessSteps";
+import { GuaranteesSection } from "@/components/sections/GuaranteesSection";
+import { LocationsGrid } from "@/components/sections/LocationsGrid";
+import { CoverageAreas } from "@/components/sections/CoverageAreas";
+import { ReviewsSection } from "@/components/sections/ReviewsSection";
+import { CTASection } from "@/components/sections/CTASection";
+import { FAQSection } from "@/components/sections/FAQSection";
+import { MetadataTemplate } from "@/lib/MetaDataTemplate";
+import type { FAQItem } from "@/lib/types";
+import { MovingGallery } from "@/components/shared/Gallery";
 
-export default function Home() {
+export const metadata: Metadata = MetadataTemplate({
+  title: "شركة نقل اثاث دبي | دار العلم خبرة +15 سنة بأسعار شفافة",
+  description:
+    "شركة نقل اثاث دبي بخبرة تتجاوز 15 عامًا — رد فوري خلال 10 دقائق، معاينة وعرض سعر مجاني، تأمين شامل، فك وتركيب وتغليف بدون دفعة مقدمة. اتصل 0551557018.",
+  ogTitle: "نقل اثاث دبي — شركة دار العلم لنقل وتغليف الأثاث",
+  ogDescription:
+    "خدمات نقل اثاث في دبي وكل الإمارات بفريق محترف، شاحنات مغلقة، تأمين شامل، وأسعار واضحة من أول مكالمة.",
+});
+
+const faqs: FAQItem[] = [
+  {
+    question: "كم تكلفة نقل اثاث في دبي؟",
+    answer: (
+      <p>
+        تتراوح أسعار نقل اثاث دبي بين 500 درهم لاستوديو صغير و4,500 درهم لفيلا 3
+        غرف. السعر يعتمد على حجم الأثاث، الطابق، توفر المصعد، والمسافة بين
+        المنزلين. اتصل بنا للحصول على معاينة وعرض سعر مجاني.
+      </p>
+    ),
+  },
+  {
+    question: "هل تحتاجون دفعة مقدمة؟",
+    answer: (
+      <p>
+        لا. لا نأخذ أي دفعة مقدمة. تدفع فقط بعد إنجاز النقل بالكامل والتأكد من
+        سلامة الأثاث.
+      </p>
+    ),
+  },
+  {
+    question: "هل خدمة فك وتركيب الأثاث ضمن السعر؟",
+    answer: (
+      <p>
+        نعم، خدمة الفك والتركيب مشمولة في عرض السعر الأساسي، بما فيها غرف النوم،
+        الخزائن، الطاولات، والمطابخ.
+      </p>
+    ),
+  },
+  {
+    question: "ما هي مدة عملية نقل الأثاث؟",
+    answer: (
+      <p>
+        نقل شقة غرفة وصالة عادة يستغرق 3–5 ساعات، شقة غرفتين 5–7 ساعات، وفيلا
+        كاملة يوم واحد.
+      </p>
+    ),
+  },
+  {
+    question: "هل تنقلون من دبي إلى إمارات أخرى؟",
+    answer: (
+      <p>
+        نعم، نخدم النقل بين الإمارات: دبي – أبوظبي، دبي – الشارقة، دبي – عجمان،
+        دبي – العين، دبي – رأس الخيمة، دبي – الفجيرة، ودبي – أم القيوين.
+      </p>
+    ),
+  },
+  {
+    question: "هل لديكم تأمين على الأثاث أثناء النقل؟",
+    answer: (
+      <p>نعم. كل عملية نقل مغطاة بتأمين شامل ضد الكسر، الفقدان، أو التلف.</p>
+    ),
+  },
+  {
+    question: "هل تعملون في عطلات الأسبوع؟",
+    answer: (
+      <p>
+        نعم، نعمل 7 أيام في الأسبوع بما فيها الجمعة والسبت. خدمة المكاتب متاحة
+        في عطلات الأسبوع لتقليل تعطيل أعمالك.
+      </p>
+    ),
+  },
+  {
+    question: "هل تقدمون خدمة تخزين الأثاث؟",
+    answer: (
+      <p>
+        نعم، عندنا مستودعات آمنة في دبي للتخزين القصير والطويل الأجل بأسعار
+        شهرية تنافسية.
+      </p>
+    ),
+  },
+];
+
+export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <>
+      <Hero
+        title="افضل شركة نقل اثاث دبي بخبرة +15 سنة — نقل بدون خدش"
+        subtitle="في شركة دار العلم نقل اثاث دبي، نقل أثاث منزلك أو مكتبك مهمتنا اليومية منذ أكثر من 15 سنة. نرد على واتساب خلال 10 دقائق، نعطيك عرض سعر فوري قبل أن تتحرك قطعة واحدة."
+        showForm
+      />
+      <TrustStats />
+      <MovingGallery />
+      <ServicesGrid />
+      <WhyUsSection />
+      <PricingTable />
+      <ProcessSteps />
+      <GuaranteesSection />
+      <LocationsGrid />
+      <CoverageAreas />
+      <ReviewsSection />
+      <CTASection
+        eyebrow="احجز الآن"
+        title="جاهز لنقل اثاثك؟ تواصل معنا الآن"
+        description="رد خلال 10 دقائق، معاينة مجانية، وعرض سعر مكتوب وثابت — بدون دفعة مقدمة ولا رسوم خفية."
+        variant="solid"
+      />
+      <FAQSection faqs={faqs} />
+    </>
   );
 }

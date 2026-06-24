@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" fill="none">
+  <rect width="400" height="240" fill="#D1E5FF"/>
+  <rect x="30" y="80" width="340" height="140" rx="4" fill="#004AAD" opacity="0.15"/>
+  <!-- Warehouse shelves -->
+  <rect x="45" y="95" width="8" height="115" fill="#004AAD" opacity="0.4"/>
+  <rect x="355" y="95" width="8" height="115" fill="#004AAD" opacity="0.4"/>
+  <rect x="45" y="100" width="318" height="8" fill="#004AAD" opacity="0.3"/>
+  <rect x="45" y="145" width="318" height="8" fill="#004AAD" opacity="0.3"/>
+  <rect x="45" y="190" width="318" height="8" fill="#004AAD" opacity="0.3"/>
+  <!-- Boxes on shelves -->
+  <rect x="60" y="108" width="45" height="32" rx="2" fill="#004AAD" opacity="0.5"/>
+  <rect x="115" y="108" width="45" height="32" rx="2" fill="#004AAD" opacity="0.4"/>
+  <rect x="170" y="108" width="45" height="32" rx="2" fill="#004AAD" opacity="0.5"/>
+  <rect x="225" y="108" width="45" height="32" rx="2" fill="#004AAD" opacity="0.35"/>
+  <rect x="280" y="108" width="45" height="32" rx="2" fill="#004AAD" opacity="0.5"/>
+  <rect x="60" y="153" width="55" height="32" rx="2" fill="#004AAD" opacity="0.4"/>
+  <rect x="125" y="153" width="45" height="32" rx="2" fill="#004AAD" opacity="0.5"/>
+  <rect x="180" y="153" width="55" height="32" rx="2" fill="#004AAD" opacity="0.35"/>
+  <rect x="245" y="153" width="45" height="32" rx="2" fill="#004AAD" opacity="0.45"/>
+  <rect x="300" y="153" width="45" height="32" rx="2" fill="#004AAD" opacity="0.4"/>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" fill="none">
+  <rect width="600" height="400" fill="#f0f6ff"/>
+  <rect x="0" y="320" width="600" height="80" fill="#D1E5FF" opacity="0.6"/>
+  <!-- People silhouettes -->
+  <circle cx="150" cy="160" r="40" fill="#004AAD" opacity="0.35"/>
+  <rect x="110" y="200" width="80" height="130" rx="8" fill="#004AAD" opacity="0.25"/>
+  <circle cx="300" cy="150" r="45" fill="#004AAD" opacity="0.5"/>
+  <rect x="255" y="192" width="90" height="140" rx="8" fill="#004AAD" opacity="0.4"/>
+  <circle cx="450" cy="160" r="40" fill="#004AAD" opacity="0.35"/>
+  <rect x="410" y="200" width="80" height="130" rx="8" fill="#004AAD" opacity="0.25"/>
+  <!-- Truck background -->
+  <rect x="30" y="280" width="540" height="5" fill="#004AAD" opacity="0.1"/>
+</svg>
