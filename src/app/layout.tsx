@@ -9,7 +9,7 @@ import { OrganizationSchema } from "@/components/schema/OrganizationSchema";
 import { LocalBusinessSchema } from "@/components/schema/LocalBusinessSchema";
 import { cn } from "@/lib/utils";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
 const tsTarek = Readex_Pro({
   subsets: ["arabic"],
@@ -40,7 +40,12 @@ export default function RootLayout({
     <html
       lang="ar"
       dir="rtl"
-      className={cn(tajawal.className, tsTarek.variable, "font-sans", geist.variable)}
+      className={cn(
+        tajawal.className,
+        tsTarek.variable,
+        "font-sans",
+        geist.variable,
+      )}
     >
       <head>
         <OrganizationSchema />
