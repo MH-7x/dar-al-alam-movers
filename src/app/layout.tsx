@@ -30,6 +30,14 @@ export const metadata: Metadata = {
   title: "شركة دار العلم نقل اثاث دبي",
   description:
     "شركة نقل اثاث دبي بخبرة تتجاوز 15 عامًا — رد فوري خلال 10 دقائق، معاينة وعرض سعر مجاني، تأمين شامل.",
+  icons: {
+    icon: [
+      { url: "/icons/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/icons/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: "/icons/apple-touch-icon.png",
+    shortcut: "/icons/favicon-32x32.png",
+  },
 };
 
 export default function RootLayout({
