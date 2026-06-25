@@ -1,8 +1,7 @@
 export interface FormDataType {
   name: string;
   phone: string;
-
-  moveDate: string;
+  moveDate?: string;
   fromAddress: string;
   toAddress: string;
   notes?: string;

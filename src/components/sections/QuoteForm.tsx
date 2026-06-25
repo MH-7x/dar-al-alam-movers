@@ -21,7 +21,8 @@ async function formAction(
     toAddress: formData.get("toAddress") as string,
     notes: (formData.get("notes") as string) || undefined,
   };
-  return SendMail(data);
+  console.log("frontend data : ", data);
+  return await SendMail(JSON.parse(JSON.stringify(data)));
 }
 
 function SubmitButton() {

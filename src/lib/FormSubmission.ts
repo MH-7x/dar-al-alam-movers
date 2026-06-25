@@ -1,43 +1,51 @@
 "use server";
 
+import { render } from "@react-email/components";
 import type { FormDataType } from "./types";
-import { APP_EMAIL, APP_NAME } from "./App";
+import QuoteRequestEmail from "@/emails/QuoteRequestEmail";
+import { Resend } from "resend";
 
 export async function SendMail(
   data: FormDataType,
 ): Promise<{ success: boolean; message: string }> {
   try {
-    const body = `
-طلب عرض سعر جديد من موقع ${APP_NAME}
+    const hasEmptyField = [
+      data.name,
+      data.phone,
+      data.fromAddress,
+      data.toAddress,
+    ].some((val) => val.trim() === "");
 
-الاسم: ${data.name}
-رقم الجوال: ${data.phone}
-تاريخ النقل: ${data.moveDate}
-العنوان الحالي: ${data.fromAddress}
-العنوان الجديد: ${data.toAddress}
-تفاصيل إضافية: ${data.notes ?? "لا يوجد"}
-    `.trim();
-
-    const res = await fetch("https://api.resend.com/emails", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        from: "onboarding@resend.dev",
-        to: APP_EMAIL,
-        subject: `طلب عرض سعر — ${data.name} — ${data.phone}`,
-        text: body,
-      }),
-    });
-
-    if (!res.ok) {
-      throw new Error("Email API error");
+    if (hasEmptyField) {
+      return { success: false, message: "All fields are required." };
     }
 
+    if (!process.env.RESEND_API_KEY) {
+      console.error("RESEND_API_KEY is not set.");
+      return { success: false, message: "Server configuration error." };
+    }
+
+    const html = await render(QuoteRequestEmail({ data }));
+
+    const resend = new Resend(process.env.RESEND_API_KEY);
+
+    const emailResponse = await resend.emails.send({
+      from: "New Quote From Website <onboarding@resend.dev>",
+      to: "daralalammovers@gmail.com",
+      subject: `طلب عرض سعر — ${data.name} — ${data.phone}`,
+      html,
+    });
+
+    if (emailResponse.error) {
+      console.error("Email error:", emailResponse.error);
+      return { success: false, message: "Failed to send email." };
+    }
+
+    console.log("Email sent:", emailResponse.data?.id);
+
     return { success: true, message: "تم إرسال طلبك بنجاح" };
-  } catch {
+  } catch (err) {
+    console.error("SendMail error:", err);
     return {
       success: false,
       message: "حدث خطأ، يرجى المحاولة لاحقًا أو الاتصال بنا مباشرة",

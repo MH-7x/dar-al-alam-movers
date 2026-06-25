@@ -1,11 +1,11 @@
 export const siteConfig = {
   name: "شركة دار العلم نقل اثاث",
   nameEn: "Dar Al Alam Movers",
-  url: "https://daralalammovers.com",
+  url: process.env.APP_URL,
   phone: "+971551557018",
   phoneDisplay: "0551557018",
   whatsapp: "https://wa.me/+971551557018",
-  email: "nimramovers@gmail.com",
+  email: "daralalammovers@gmail.com",
   hours: "7 أيام، 24 ساعة",
   coverage: "دبي + كل الإمارات السبع",
   address: {
