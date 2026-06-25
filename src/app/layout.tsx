@@ -8,6 +8,7 @@ import { StickyCTAs } from "@/components/shared/StickyCTAs";
 import { OrganizationSchema } from "@/components/schema/OrganizationSchema";
 import { LocalBusinessSchema } from "@/components/schema/LocalBusinessSchema";
 import { cn } from "@/lib/utils";
+import { APP_URL } from "@/lib/App";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -25,7 +26,7 @@ const tajawal = Tajawal({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://daralalammovers.com"),
+  metadataBase: new URL(APP_URL),
   title: "شركة دار العلم نقل اثاث دبي",
   description:
     "شركة نقل اثاث دبي بخبرة تتجاوز 15 عامًا — رد فوري خلال 10 دقائق، معاينة وعرض سعر مجاني، تأمين شامل.",
