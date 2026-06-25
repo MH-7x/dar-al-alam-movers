@@ -9,6 +9,7 @@ import { OrganizationSchema } from "@/components/schema/OrganizationSchema";
 import { LocalBusinessSchema } from "@/components/schema/LocalBusinessSchema";
 import { cn } from "@/lib/utils";
 import { APP_URL } from "@/lib/App";
+import GTM from "../components/GTM";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -59,6 +60,7 @@ export default function RootLayout({
       <head>
         <OrganizationSchema />
         <LocalBusinessSchema />
+        <GTM />
       </head>
       <body className="min-h-screen flex flex-col">
         <Header />
