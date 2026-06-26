@@ -118,6 +118,17 @@ export function Footer() {
               <p className="text-xs text-white/50">ساعات العمل</p>
               <p className="text-sm text-white/80 mt-1">{siteConfig.hours}</p>
             </div>
+            <div className="mt-6">
+              <p className="text-xs text-white/50">Design and Maintenance By</p>
+              <a
+                className="text-sm text-white/80 mt-1"
+                href="https://mashalhuraira.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Mashal Huraira
+              </a>
+            </div>
           </div>
         </div>
 

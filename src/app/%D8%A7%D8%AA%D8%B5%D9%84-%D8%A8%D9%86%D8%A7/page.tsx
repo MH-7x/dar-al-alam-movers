@@ -166,7 +166,7 @@ export default function ContactPage() {
                 </div>
               </a>
               <a
-                href={siteConfig.email}
+                href={`mailto:${siteConfig.email}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-shadow group"
