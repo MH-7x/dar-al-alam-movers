@@ -17,7 +17,7 @@ export function TrustStats() {
             >
               <div
                 className="text-3xl md:text-4xl font-bold text-[var(--primary)] mb-1"
-                style={{ fontFamily: "var(--font-ts-tarek), sans-serif" }}
+                style={{ fontFamily: "var(--font-heading), sans-serif" }}
               >
                 {stat.value}
               </div>

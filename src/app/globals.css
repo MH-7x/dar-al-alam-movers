@@ -63,6 +63,7 @@
 }
 
 @theme inline {
+  --font-sans: var(--font-tajawal), var(--font-sans);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);

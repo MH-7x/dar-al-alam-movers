@@ -280,7 +280,7 @@ export function LocationPageTemplate({
               <div className="bg-[var(--primary)] rounded-3xl p-10 text-center text-white max-w-xs w-full">
                 <div
                   className="text-5xl font-bold mb-2"
-                  style={{ fontFamily: "var(--font-ts-tarek), sans-serif" }}
+                  style={{ fontFamily: "var(--font-heading), sans-serif" }}
                 >
                   4.9
                 </div>

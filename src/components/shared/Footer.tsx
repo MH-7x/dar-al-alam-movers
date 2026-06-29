@@ -121,7 +121,7 @@ export function Footer() {
             <div className="mt-6">
               <p className="text-xs text-white/50">Design and Maintenance By</p>
               <a
-                className="text-sm text-white/80 mt-1"
+                className="inline-block text-sm text-white/80 mt-1 hover:underline hover:text-white transition-all"
                 href="https://mashalhuraira.vercel.app"
                 target="_blank"
                 rel="noopener noreferrer"

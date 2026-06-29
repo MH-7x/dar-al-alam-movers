@@ -46,10 +46,10 @@ export function WhyUsSection() {
               />
             </div>
             {/* Floating badge */}
-            <div className="absolute -bottom-5 md:-end-5 bg-[var(--primary)] text-white rounded-2xl p-5 shadow-xl">
+            <div className="absolute -bottom-5 end-4 md:-end-5 bg-[var(--primary)] text-white rounded-2xl p-5 shadow-xl">
               <div
                 className="text-3xl font-bold"
-                style={{ fontFamily: "var(--font-ts-tarek), sans-serif" }}
+                style={{ fontFamily: "var(--font-heading), sans-serif" }}
               >
                 4.9
               </div>

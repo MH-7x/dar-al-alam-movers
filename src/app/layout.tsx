@@ -51,7 +51,7 @@ export default function RootLayout({
       lang="ar"
       dir="rtl"
       className={cn(
-        tajawal.className,
+        tajawal.variable,
         tsTarek.variable,
         "font-sans",
         geist.variable,

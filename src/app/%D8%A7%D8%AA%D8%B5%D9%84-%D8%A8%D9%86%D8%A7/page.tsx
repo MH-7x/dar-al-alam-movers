@@ -10,6 +10,7 @@ import {
   Clock,
   MapPin,
   CheckCircle2,
+  Mail,
 } from "lucide-react";
 import { siteConfig } from "@/lib/siteConfig";
 
@@ -167,23 +168,20 @@ export default function ContactPage() {
               </a>
               <a
                 href={`mailto:${siteConfig.email}`}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="flex items-center gap-4 bg-white rounded-2xl p-5 shadow-lg hover:shadow-xl transition-shadow group"
               >
-                <div className="w-12 h-12 rounded-xl bg-[#25D366]/10 flex items-center justify-center flex-shrink-0">
-                  <MessageCircle size={22} className="text-foreground " />
+                <div className="w-12 h-12 rounded-xl bg-[var(--accent)] flex items-center justify-center flex-shrink-0">
+                  <Mail size={22} className="text-[var(--primary)]" />
                 </div>
                 <div>
                   <p className="text-xs text-[var(--muted-foreground)] mb-0.5">
-                    {" "}
-                    البريد الألكتروني
+                    البريد الإلكتروني
                   </p>
-                  <p className="text-lg font-bold text-foreground " dir="ltr">
+                  <p className="text-lg font-bold text-[var(--primary)]" dir="ltr">
                     {siteConfig.email}
                   </p>
                   <p className="text-xs text-[var(--muted-foreground)]">
-                    رد خلال 10 دقائق
+                    نرد خلال دقائق معدودة
                   </p>
                 </div>
               </a>
